@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  width: 90%;
+  max-width: 600px;
+  height: 600px;
+  margin: 30px auto;
+  outline: 3px solid #000;
+  display: grid;
+
+  /* grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2,150px); 
+
+
+  justify-content: end;  start/space-between/center/stretch/space-evenly/space-around               Alinea el contenido de forma horizontal siempre y cuando hayga espacio
+  align-content: stretch; end/start/space-between/center/space-evenly/space-around                  Alinea el contenido de forma vertical siempre y cuando hayga espacio
+
+  PROPIEDAD ABREVIADA DE justify-content Y align-content
+  place-content: align-content  justify-content */
+  place-content: center;
+
+  /*Propiedad abreviada para
+   grid-template-rows grid-template-columns grid-template-areas
+   grid-auto-rows grid-auto-columns y grid-auto-flow.
+
+  grid:rows/columns
+  grid: 50% 50% / repeat(3, 1fr);*/
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid_item {
+  padding: 20px 0;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  order: 0;
+}
+
+.grid :nth-child(1) {
+  background: rgb(4, 86, 6);
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 2; /*todos los elementos tienen un z index  siempre y cuando esten en grid y flex item*/
+}
+
+.grid :nth-child(2) {
+  background: crimson;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.grid :nth-child(3) {
+  background: coral;
+}
+
+.grid :nth-child(4) {
+  background: indigo;
+}

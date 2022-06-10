@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  width: 90%;
+  max-width: 600px;
+  height: 600px;
+  margin: 30px auto;
+  outline: 3px solid #000;
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  justify-items: center; /*Alinea los elementos en fila
+                 start/end/center/stretch es por defecto*/
+  align-items: start; /*Alinea los elementos en columna
+               /end/center/stretch es por defecto*/
+  /*ESTA ES LA FORMA ABREVIADA DE JUSTIFY Y ALIGN*/
+  place-items: start end;
+}
+
+.grid_item {
+  padding: 20px 0;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.grid :nth-child(1) {
+  background: rgb(4, 86, 6);
+}
+
+.grid :nth-child(2) {
+  background: crimson;
+}
+
+.grid :nth-child(3) {
+  background: coral;
+}
+
+.grid :nth-child(4) {
+  background: indigo;
+}
